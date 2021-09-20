@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parkinghelper.view.CustomerPageController">
+   <children>
+      <AnchorPane layoutX="143.0" layoutY="133.0" prefHeight="480.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="200.0" layoutY="104.0" prefHeight="500.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="131.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../pic/ParkingSymbol.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="hi" alignment="CENTER" prefHeight="39.0" prefWidth="430.0" text="Hi XXX!" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="32.0" prefWidth="490.0" text="Where do you want to park today?" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="back" mnemonicParsing="false" onAction="#handleBack" prefHeight="30.0" prefWidth="143.0" style="-fx-background-color: DARKSEAGREEN; -fx-border-radius: 5px;" text="Back" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="CENTER" prefHeight="19.0" prefWidth="498.0" text="-----------------------------------------------------" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="259.0" prefWidth="500.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="243.0" prefWidth="247.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="272.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="117.0" text="Parking Lot#: ">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="lot" prefHeight="25.0" prefWidth="105.0" promptText="Lot# (1 - 10)" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="272.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="121.0" text="Parking Hours: ">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ChoiceBox fx:id="hourbox" prefWidth="105.0" />
+                                 </children>
+                              </HBox>
+                              <Button fx:id="search" mnemonicParsing="false" onAction="#handleSearch" prefHeight="30.0" prefWidth="179.0" style="-fx-background-color: DARKSEAGREEN; -fx-border-radius: 5px;" text="Search" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="58.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Label fx:id="prompt1" alignment="CENTER" prefHeight="60.0" prefWidth="228.0" textFill="#f20c0c" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <VBox prefHeight="259.0" prefWidth="219.0">
+                           <children>
+                              <HBox prefHeight="41.0" prefWidth="219.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0" text="Parking Lot#: ">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="lotnumber" contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0" text="#">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="41.0" prefWidth="219.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0" text="Lot Status: ">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="status" contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0" text="#">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Label fx:id="fees" contentDisplay="TOP" prefHeight="38.0" prefWidth="224.0" text="Fee for every 30 minutes： $1.00">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <VBox alignment="TOP_CENTER" prefHeight="145.0" prefWidth="219.0">
+                                 <children>
+                                    <Button fx:id="book" mnemonicParsing="false" onAction="#handleBook" prefHeight="30.0" prefWidth="179.0" style="-fx-background-color: DARKSEAGREEN; -fx-border-radius: 5px;" text="Book!" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="45.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Label fx:id="prompt2" prefHeight="67.0" prefWidth="180.0" textFill="#f20c0c" wrapText="true">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

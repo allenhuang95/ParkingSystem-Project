@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parkinghelper.view.PaymentPageController">
+   <children>
+      <AnchorPane layoutX="-98.0" layoutY="-105.0" prefHeight="395.0" prefWidth="402.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="480.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="131.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../pic/ParkingSymbol.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="39.0" prefWidth="430.0" text="Payment(Protype)" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="500.0">
+                     <children>
+                        <Label prefHeight="39.0" prefWidth="135.0" text="Amount due:">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="amount" prefHeight="39.0" prefWidth="254.0" text="Amount due:">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="500.0">
+                     <children>
+                        <Label prefHeight="39.0" prefWidth="135.0" text="Card number:">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="cardnumber" prefHeight="25.0" prefWidth="285.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="500.0">
+                     <children>
+                        <Label prefHeight="39.0" prefWidth="135.0" text="Exp. date:">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <DatePicker />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="500.0">
+                     <children>
+                        <Label prefHeight="39.0" prefWidth="135.0" text="Cardholder name:">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="name" prefHeight="25.0" prefWidth="285.0" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="prompt" alignment="CENTER" prefHeight="17.0" prefWidth="385.0" text="The name does not match our record!" textFill="#f20909">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="pay" mnemonicParsing="false" onAction="#handlePay" prefHeight="24.0" prefWidth="213.0" style="-fx-background-color: DARKSEAGREEN; -fx-border-radius: 5px;" text="PAY!" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="269.0" text="Not Ready?">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button fx:id="logoff" mnemonicParsing="false" onAction="#handleLogOff" prefHeight="30.0" prefWidth="188.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 5px;" text="Log off" textFill="#616161">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <Label fx:id="prompt1" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="0.0" textFill="#f20909">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

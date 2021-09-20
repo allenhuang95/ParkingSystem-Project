@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parkinghelper.view.MyBookingPageController">
+   <children>
+      <AnchorPane layoutX="183.0" layoutY="173.0" prefHeight="1112.0" prefWidth="1172.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="200.0" layoutY="104.0" prefHeight="500.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="131.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../pic/ParkingSymbol.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="39.0" prefWidth="430.0" text="My Bookings" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button fx:id="back" mnemonicParsing="false" onAction="#handleBack" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: DARKSEAGREEN; -fx-border-radius: 5px;" text="back" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="CENTER" prefHeight="20.0" prefWidth="498.0" text="-----------------------------------------------------" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="288.0" prefWidth="500.0">
+                     <children>
+                        <VBox fx:id="box1" prefHeight="288.0" prefWidth="165.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="165.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0" text="Booking#:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="bookingid1" contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="165.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0" text="Lot#">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="lot1" contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="165.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="35.0" prefWidth="45.0" text="From:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="from1" contentDisplay="TOP" prefHeight="35.0" prefWidth="116.0">
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="165.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="35.0" prefWidth="45.0" text="To:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="to1" contentDisplay="TOP" prefHeight="35.0" prefWidth="117.0">
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="165.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0" text="Fee:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="fee1" contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="165.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0" text="Status:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="status1" contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <VBox alignment="CENTER" prefHeight="77.0" prefWidth="165.0">
+                                 <children>
+                                    <Button fx:id="pay1" mnemonicParsing="false" onAction="#handlePay1" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: DARKSEAGREEN; -fx-border-radius: 5px;" text="Pay!" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button fx:id="cancel1" mnemonicParsing="false" onAction="#handelCancel1" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: DARKSALMON; -fx-border-radius: 5px;" text="Cancel" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="box2" prefHeight="288.0" prefWidth="165.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="165.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0" text="Booking#:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="bookingid2" contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="165.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0" text="Lot#">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="lot2" contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="165.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="35.0" prefWidth="45.0" text="From:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="from2" contentDisplay="TOP" prefHeight="35.0" prefWidth="117.0">
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="165.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="35.0" prefWidth="45.0" text="To:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="to2" contentDisplay="TOP" prefHeight="35.0" prefWidth="117.0">
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="165.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0" text="Fee:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="fee2" contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="165.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0" text="Status:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="status2" contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <VBox alignment="CENTER" prefHeight="77.0" prefWidth="165.0">
+                                 <children>
+                                    <Button fx:id="pay2" mnemonicParsing="false" onAction="#handlePay2" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: DARKSEAGREEN; -fx-border-radius: 5px;" text="Pay!" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button fx:id="cancel2" mnemonicParsing="false" onAction="#handelCancel2" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: DARKSALMON; -fx-border-radius: 5px;" text="Cancel" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="box3" prefHeight="288.0" prefWidth="165.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="165.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0" text="Booking#:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="bookingid3" contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="165.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0" text="Lot#">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="lot3" contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="165.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="45.0" text="From:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="from3" contentDisplay="TOP" prefHeight="38.0" prefWidth="117.0">
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="165.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="45.0" text="To:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="to3" contentDisplay="TOP" prefHeight="38.0" prefWidth="117.0">
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="165.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0" text="Fee:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="fee3" contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="165.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0" text="Status:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="status3" contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <VBox alignment="CENTER" prefHeight="77.0" prefWidth="165.0">
+                                 <children>
+                                    <Button fx:id="pay3" mnemonicParsing="false" onAction="#handlePay3" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: DARKSEAGREEN; -fx-border-radius: 5px;" text="Pay!" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button fx:id="cancel3" mnemonicParsing="false" onAction="#handelCancel3" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: DARKSALMON; -fx-border-radius: 5px;" text="Cancel" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

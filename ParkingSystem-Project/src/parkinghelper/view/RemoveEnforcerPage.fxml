@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parkinghelper.view.RemoveEnforcerPageController">
+   <children>
+      <AnchorPane layoutX="153.0" layoutY="143.0" prefHeight="623.0" prefWidth="653.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="131.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../pic/ParkingSymbol.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="39.0" prefWidth="430.0" text="Remove an Enforcer" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="19.0" prefWidth="498.0" text="-----------------------------------------------------" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="259.0" prefWidth="500.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="259.0" prefWidth="253.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="272.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="101.0" text="Unique ID:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="id" prefHeight="25.0" prefWidth="105.0" promptText="Unique ID" />
+                                 </children>
+                              </HBox>
+                              <Button fx:id="search" mnemonicParsing="false" onAction="#handleSearch" prefHeight="30.0" prefWidth="179.0" style="-fx-background-color: DARKSEAGREEN; -fx-border-radius: 5px;" text="Search" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="85.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Label fx:id="prompt1" alignment="CENTER" prefHeight="24.0" prefWidth="228.0" textFill="#f20c0c" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button fx:id="back" mnemonicParsing="false" onAction="#handleBack" prefHeight="30.0" prefWidth="179.0" style="-fx-background-color: GOLD; -fx-border-radius: 5px;" text="back" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <Label />
+                        <VBox prefHeight="259.0" prefWidth="219.0">
+                           <children>
+                              <HBox prefHeight="41.0" prefWidth="219.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0" text="Email:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="email" contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0" text="#">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="41.0" prefWidth="219.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0" text="Name:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="name" contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0" text="#">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="41.0" prefWidth="219.0">
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0" text="ID:">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="id2" contentDisplay="TOP" prefHeight="38.0" prefWidth="92.0" text="#">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="175.0" prefWidth="219.0">
+                                 <children>
+                                    <Button fx:id="remove" mnemonicParsing="false" onAction="#handelRemove" prefHeight="30.0" prefWidth="179.0" style="-fx-background-color: DARKSALMON; -fx-border-radius: 5px;" text="Remove" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="37.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Label fx:id="prompt2" prefHeight="67.0" prefWidth="180.0" textFill="#f20c0c" wrapText="true">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
